@@ -32,6 +32,9 @@ export class TaskRepository {
     );
     const id = result.lastID;
     const created = await db.get<Task>("SELECT * FROM tasks WHERE id = ?;", id);
+    if (!created) {
+    throw new Error('Failed to create task');
+  }
     return created;
   }
 
