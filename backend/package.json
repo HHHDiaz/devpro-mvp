@@ -12,12 +12,12 @@
     "body-parser": "^2.2.0",
     "express": "^4.21.2",
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "@types/node": "^18.19.130"    
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.6",
     "@types/express": "^4.17.25",
-    "@types/node": "^18.19.130",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
