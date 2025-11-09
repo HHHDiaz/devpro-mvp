@@ -1,0 +1,25 @@
+# render.yaml
+services:
+  - type: web
+    name: devpro-mvp
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: |
+      cd backend
+      npm install
+      npm run build
+    startCommand: |
+      cd backend
+      node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3333
+    autoDeploy: true
+    healthCheckPath: /api/tasks
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
