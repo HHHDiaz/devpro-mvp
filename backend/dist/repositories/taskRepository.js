@@ -28,6 +28,9 @@ class TaskRepository {
         const result = await db.run("INSERT INTO tasks (title, description, state) VALUES (?, ?, ?);", task.title, task.description || null, task.state || 'pending');
         const id = result.lastID;
         const created = await db.get("SELECT * FROM tasks WHERE id = ?;", id);
+        if (!created) {
+            throw new Error('Failed to create task');
+        }
         return created;
     }
     async updateState(id, state) {
