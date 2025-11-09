@@ -19,7 +19,3 @@ services:
         value: 3333
     autoDeploy: true
     healthCheckPath: /api/tasks
-    disk:
-      name: data
-      mountPath: /data
-      sizeGB: 1
