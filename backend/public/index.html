@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>DevPro MVP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 24px; }
+    .task { border: 1px solid #ddd; padding: 8px; margin: 8px 0; border-radius: 6px; }
+    .controls { margin-top: 8px; }
+    button { margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <h1>DevPro MVP - Gestor de Tareas</h1>
+
+  <form id="createForm">
+    <input id="title" placeholder="Título" required />
+    <input id="description" placeholder="Descripción (opcional)" />
+    <button type="submit">Crear tarea</button>
+  </form>
+
+  <h2>Tareas</h2>
+  <div id="tasks"></div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
